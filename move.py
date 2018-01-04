@@ -1,6 +1,12 @@
 ## Main goal:
 # Everything should be placed in one big directory
 
+# TODO: Check what's up with the album covers
+# TODO: Check how empty subdirectories are handled
+# TODO: Report amount of files moved
+# TODO: Print each file which will be moved
+
+
 import os
 import shutil
 
@@ -13,11 +19,6 @@ print("The following subdirectories are present: ", level0SubDirectories)
 print("The following files are present: ", level0Files)
 print("Starting to move files to main directory...")
 
-# [x[0] for x in os.walk(os.getcwd())]
-
-# print(x[0] for x in os.walk(directory))
-# Note: keep a counter which stores the amount of subdirectories from
-# the main directory in which we are currently working
 currentWorkingDirectory = os.getcwd()
 currentDirLevel = 0
 
