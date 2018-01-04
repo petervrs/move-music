@@ -31,6 +31,8 @@ def moveFilesToMainDirectory(path):
     if len(subDirs) > 0:
         print("There are subdirectories")
         # For each subdirectory, call this function
+        for subDir in subDirs:
+            moveFilesToMainDirectory(os.path.join(path, subDir))
     else:
         print("There are no subdirectories")
         # Check if there are files present
